@@ -1,22 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Header = ()=>{
-    return <div className="header">
-        <div>
-            <img className="logo" src="https://assets.materialup.com/uploads/61d86780-be13-47fa-81a6-226aac22db27/preview.jpg"></img>
-        </div>
-        <div className="nav-items">
-            <ul>
-                <li>Home</li>
-                <li>About Us</li>
-                <li>Contact Us</li>
-                <li>Cart</li>
-            </ul>
-        </div>
-    </div>
-}
-
 const resObj =      [
     {
       "info": {
@@ -449,46 +430,6 @@ const resObj =      [
         "link": "https://www.swiggy.com/restaurants/kfc-1st-phase-electronic-city-bangalore-17311",
         "type": "WEBLINK"
       }
-    }]
+    }];
 
-
-const styleCard = {
-    backgroundColor:"#f0f0f0"
-}
-
-const RestaurantCard = (props)=>{
-    const {resData} = props;
-    return <div className="res-card" style={styleCard}>
-        <img alt="res-log" className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+ resData.info.cloudinaryImageId}></img>
-        <h3>{resData.info.name}</h3>
-        <h4>{resData.info.cuisines.join(', ')}</h4>
-        <h4>{resData.info.avgRating} stars</h4>
-        <h4>{resData.info.costForTwo}</h4>
-    </div>
-}
-
-const Body = ()=>{
-    return <div className="body">
-        <div className="search"> Search</div>
-        <div className="res-container">
-           {
-            resObj.map(res=> <RestaurantCard key={res.info.id} resData={res}/>)
-           }
-
-        </div>
-
-    </div>
-}
-
-
-
-const AppLayout = ()=>{
-    return <div className="app">
-        <Header/>
-        <Body/>
-    </div>
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout/>);
-
+export default resObj;
