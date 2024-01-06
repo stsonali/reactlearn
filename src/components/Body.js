@@ -17,11 +17,11 @@ const Body = () => {
     const fetchData = async ()=>{
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8498481&lng=77.6544856&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const jsondata  = await data.json();
-        setlistOfRestaurants(jsondata.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
-        setFilteredRestaurants(jsondata.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+        setlistOfRestaurants(jsondata.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
+        setFilteredRestaurants(jsondata.data.cards[2].card.card.gridElements.infoWithStyle.restaurants);
     }
 
-    if(!listOfRestaurants.length) return <h1>Loading...</h1>
+    if(!listOfRestaurants?.length) return <h1>Loading...</h1>
 
   return (
     <div className="body">
