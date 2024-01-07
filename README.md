@@ -1,5 +1,7 @@
 # React hooks
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7ce87f04-f0ed-4a58-8095-dee1e5e2f552/deploy-status)](https://app.netlify.com/sites/st-swiggy-clone/deploys)
+
 -Normal pre built JS functions
 
 userState()-- superpowerful react variables
